@@ -1,0 +1,71 @@
+<!--input과 form
+
+    fieldset은 여닫는 부분 사이를 사각형으로 영역을 만들어줌.
+
+    - legend = 범례
+    - <input type=""/> 
+        - 하나짜리 태그(합쳐짐)
+        - type
+            - text
+                - 한 줄로 된 문자
+            - password
+                - 비밀번호
+            - radio (라디오 버튼)
+                - name = "recieve" ==> 그룹이 같은 경우에서는 하나만 고를 수 있음.
+                       = (recieve 그룹) 그룹 이름이 같다면, 버튼이 몇 개가 있던지 그 중 하나 선택할 수 있다.
+                - name="eat"
+                       = (name 그룹)
+            - checkbox
+                - 중복선택 허용
+            - submit
+                - 전송하는 버튼
+            - reset
+                - 초기화
+                       
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input과 form</title>
+</head>
+<body>
+    
+    <h1>input 요소들</h1>
+    
+    <!--fieldset-->
+        <fieldset>
+            <legend>회원가입</legend>
+                <p>아이디 : <input type="text"/></p>
+                <p>비밀번호 : <input type="password"/></p>
+                <p>메일 수신여부 : 
+                    <input type="radio" name="recieve" />예
+                    <input type="radio" name="recieve" />아니오
+
+                </p>
+                <p>
+                    식사여부 :
+                    <input type="radio" name="eat" /> 먹음
+                    <input type="radio" name="eat" /> 안먹음
+                    <input type="radio" name="eat" /> 먹는중
+                </p>
+                <p>
+                    현재 공부중인 것:
+                    <input type="checkbox" name="study" />HTML
+                    <input type="checkbox" name="study" />CSS
+                    <input type="checkbox" name="study" />Javascript
+                </p>
+                <p>
+                    제출
+                    <input type="submit" value="전송">
+                    <input type="reset" value="취소">
+                </p>
+        </fieldset>
+
+</body>
+</html>

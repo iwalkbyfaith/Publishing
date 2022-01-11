@@ -1,0 +1,67 @@
+<!--추가 폼 요소
+
+    type +
+        - 검색 search
+        - 이메일 email
+        - 사이트 url
+        - 전화번호 tel
+        - 숫자 number
+            - 추가제한속성
+                min 최소값
+                max 최대값
+                step 구간
+                    스킨박스?의 버튼을 누를때마다 2씩 올라가고, 내려감.
+                    안 적으면 기본값이 1
+        - 범위 range
+        - 날짜 date
+        - 날짜시간 datetime
+            - 날짜시간(현재지역) datetime-local
+
+    
+    e 표기법
+        E라는 알파벳을 기준으로 왼쪽과 오른쪽으로 나뉨.
+            (뜻)왼쪽에 있는 수를 오른쪽 자리수만큼 올려라.
+            100이라는 수가 있으면
+                = 1.00E + 02
+                == 왼쪽에 있는 수 1.00을 2자리수만큼 올려라 ==> 100
+        장점: 긴 자리 숫자를 한 눈에 몇자리 수인지 알 수 있음.
+
+        number에서 e가 허용되는 이유는 "12512e+50" 이런식으로 쓸 수 있게 하기 위함이다.
+   
+    사용 태그 : <fieldset>, <legend>, <form>, <p>, <input/>
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추가 폼 요소</title>
+</head>
+<body>
+    <fieldset>
+        <legend>input type</legend>
+            <form>
+                <p>검색 : <input type="search" /></p>
+                <p>이메일 : <input type="email" /></p>
+                <p>사이트주소 : <input type="url" /></p>
+                <p>전화번호 : <input type="tel" /></p>
+                <p>나이 : <input type="number" min="0" max="150" step="2" /></p>
+                <p>만족도 : <input type="range" /></p>
+                <p>날짜 : <input type="date" /></p>
+                <p>날짜시간 : <imput type="datetime" /></p>
+                <p>날짜시간(현재지역) : <input type="datetime-local" /></p>
+                <p>월단위날짜 : <input type="month" /></p>
+                <p>주단위날짜 : <input type="week" /></p>
+                <p>시간 : <input type="time" /></p>
+                <p>색상 : <input type="color" /></p>
+            </form>
+    </fieldset>
+
+
+
+</body>
+</html>

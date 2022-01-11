@@ -1,0 +1,38 @@
+<!-- 여러 줄 글상자
+
+    여러 줄 글상자 만들기 : <textarea></textarea>
+    속성에 값 주기
+        cols="숫자"
+        rows="숫자"
+    
+    Q) 왜 꺽쇠를 쓰지 않고 &lt; 와 &gt;를 사용?
+    A) 꺽쇠가 문자로 쓰인건지 태그를 열기 위해 쓰인건지 구분이 안감.
+        lt = less than       &lt == <
+        gt = greater than    &gt == >
+    
+        마찬가지로 슬래시(/)도 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여러 줄 입력창</title>
+</head>
+<body>
+    <fieldset>
+        <legend>여러 줄 글상자</legend>
+            <p> &lt;textarea&gt;&lt;/textarea&gt;</p>
+            <p>속성에 cols="30"을 주면 30글자가 가로 너비</p>
+            <p>속성에 rows="10"을 주면 10글자가 세로 높이가 된다.</p>
+                <p>답글</p>
+                <textarea cols="30" rows="10"></textarea>
+    </fieldset>
+
+
+
+</body>
+</html>

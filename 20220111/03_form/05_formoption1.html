@@ -1,0 +1,46 @@
+<!-- 폼 옵션1) required 속성
+
+    form이라는 태그 내부에 submit을 만들면 form 안의 내용들을 보내준다.
+    코드를 작성하고 라이브서버에 들어가보면
+        * 붙어 있는 표시가 있음에도 제출 안한 내용들이 submit된다. 이를 방지하기 위해 유효성 검사(required) 입력해주는 것.
+
+    유효성 검사
+        반드시 입력해야하는 from 내부의 항목에는 requried를 적어준다.
+        적고 나서 다시 라이브 서버에서 submit 하려고 하면 "! 이 입력란을 작성하세요" 메세지가 뜨면서 submit이 안된다.
+        input에 대해서는 전부 붙일 수 있다.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>required 속성</title>
+</head>
+<body>
+    <fieldset>
+        <legend>유효성 검사</legend>
+        <form>
+            <ul>
+                <li>
+                    <b>*</b> 이름 : <input type="text" required />
+                </li>
+                <li>
+                    <b>*</b> 아이디 : <input type="text" required/>
+                </li>
+                <li>
+                    <b>*</b> 비밀번호 : <input type="password" required/>
+                </li>
+                <li>
+                    휴대폰 : <input type="tel" />
+                </li>
+            </ul>
+            <input type="submit" value="제출" />
+        </form>
+    </fieldset>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- 셀렉트 만들기
+
+    select => 선택지를 선택할 수 있는 네모 박스 만듦
+    option => 박스 안에 값을 집어 넣음.
+
+    Q) 내부에서 또 세분화를 시키고 싶다면?
+    A) optgroup을 이용해서 라벨 이름을 붙여줌
+
+
+    사용 태그 : <fieldset>, <legend>, <p>, <select>, <option>, <optgroup>
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉트 요소</title>
+</head>
+<body>
+    <h1>셀렉트 만들기</h1>
+    <fieldset>
+        <legend>선택 항목들</legend>
+            <p>과목 선택
+                <select>
+                    <option>html5</option>
+                    <option>css</option>
+                    <option>javascript</option>
+                    <option>jquery</option>
+                </select>
+            </p>
+
+            <!--내부에서 또 세분화 시키고 싶다면!-->
+            <p>수강지역 선택
+                <select>
+                    <optgroup label="마포구">    <!--optgroup을 이용해서 라벨 이름을 붙여줌.-->
+                        <option>서교동</option>
+                        <option>동교동</option>
+                        <option>합정동</option>
+                    </optgroup>
+                    <optgroup label="동대문구">
+                        <option>전농동</option>
+                        <option>이문동</option>
+                        <option>회기동</option>
+                    </optgroup>
+                </select>
+
+            </p>
+            <p>수업시간 선택
+                <select>
+                    <optgroup label ="오전">
+                        <option>6시 ~ 9시</option>
+                        <option>9시 ~ 12시</option>
+                    </optgroup>
+                    <optgroup label ="오후">
+                        <option>12시 ~ 15시</option>
+                        <option>15시 ~ 18시</option>
+                    </optgroup>
+                </select>
+            </p>
+    </fieldset>
+
+
+</body>
+</html>

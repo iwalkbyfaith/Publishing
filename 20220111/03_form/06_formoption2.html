@@ -1,0 +1,29 @@
+<!-- 폼 옵션2) placeholder
+
+    어떻게 쓰는지 분석해보기 위해서
+    크롬으로 연 네이버 로그인창에서 F12(개발자도구)를 눌러서 코드를 확인해보자.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>placeholder</title>
+</head>
+<body>
+    <fieldset>
+        <legend>필드에 힌트주기</legend>
+        아이디 <input type="text"<br/>
+        비밀번호 <input type="password"><br/><br/>
+
+        <hr/>
+        
+        <!--input 왼쪽에 아이디, 비밀번호를 적어두면 알 수 있겠지만, 적지 않는다면 모를 것(일반적인 상식을 제외했을 때)
+            로그인 칸, 비밀번호 칸이라는 것을 알려주기 위해 placeholder를 사용해보자.-->
+        <input type="text" placeholder="아이디"><br/>
+        <input type="password" placeholder="비밀번호"><br/>
+        
+    </fieldset>
+</body>
+</html>
