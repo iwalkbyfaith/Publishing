@@ -1,0 +1,61 @@
+<!-- 그룹핑 Grouping
+
+    기본적으로 div 라는 태그를 써서 그룹핑을 한다.
+        div = division 
+    div를 사용해서 웹사이트의 레이아웃(기본적인 틀)을 만든다.
+    div는 크게 세가지로 나뉜다.
+        1. 헤더
+            메뉴, 항목 
+            상단의 메뉴바는 변하지 않고 고정 되어 있음.
+            div를 안 쓰고 헤더 전용으로 나온 헤더 태그를 쓰기도 함.
+        2. 바디body (혹은 컨테이너container, 컨텐트content, 메인지역mainarea)
+            실제 컨텐츠
+            메뉴바에서 무엇을 클릭했느냐에 따라 바뀜.
+            사이트의 중추적인 기능을 담당.
+        3. 푸터 footer
+            법적 조항, 소재지, 서비스안내, 정보 책임자 같은 것들을 적어두는 정보창.
+
+    사실상 거의 모든 사이트가 이 구성으로 만들어진다고 생각하면 된다.
+    일단 div로 헤더, 바디, 푸터를 만들어 놓고 시작하면 됨. (= 레이아웃을 따는 기초적인 방법)
+
+    div 태그는 블록 태그이고, 내부는 인라인 태그이기 때문에 <br>을 써서 처리한다.
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그룹핑</title>
+</head>
+<body>
+    <h1>그룹핑</h1>
+    <h2>div 그룹핑</h2>
+
+        <div id="header">
+            헤더 부분
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">소개페이지</a></li>
+            </ul>
+        </div>
+
+        <div id="body">
+            컨텐츠(몸)부분 <br>
+            컨텐츠입니다 컨텐츠<br>
+            여기까지 컨텐츠츠
+            
+        </div>
+        
+        <div id="footer">
+            푸터 부분
+            <address>COPYRIGHT &copy; ICT. ALL RIGHT RESERVED</address>
+        </div>
+    
+</body>
+</html>

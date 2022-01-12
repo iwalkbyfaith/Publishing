@@ -1,0 +1,59 @@
+<!-- 자식 선택자
+
+    문법 : 
+    자식 선택자는
+    부모태그 > 자식태그 방식으로 입력하고
+    두 개 이상의 계층도 지정 가능하다.
+    단, > 선택자의 경우는 맞닿아 있는 관계가 아니라면 설령 특정 태그의 하위에 지목된 태그가 있어도 적용되지 않는다.
+
+    ()
+    바디 내부에 h1이 있으면 => 바디가 부모, h1이 자식
+         마찬가지로 ul, p도 자식
+        ==> (부모)바디, (자식)h1, ul, p
+    
+        ul의 내부에는 li가 있다.
+        (부모)ul, (자식)li
+
+        li 내부에는 p가 있다.
+        (부모)li, (자식)p
+
+        body와 p의 관계 => 조상?과 자손의 관계
+
+    p에 대해서 부산과 제주만 바꾸고 싶을 때
+        p {color:blue;}
+            == 울릉도까지 바뀜.
+        li > p {color:blue;}
+            == li 하위에 있는 p 만 바꾸겠다.
+        
+        이런 방법도 있음(계층을 적을때 하위를 딱 하나만 적지 않아도 된다는 뜻.)
+            ul > li > p {color:blue;}
+    
+    Q) 울릉도만 바꾸고 싶다면?
+        body > p {color:red;}
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        li > p {color:blue;}
+        body > p {color:crimson;}
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>확정 여행지 목록</h1>
+    <ul>
+        <li><p>2월 : 부산</p></li>
+        <li><p>3월 : 제주</p></li>
+    </ul>
+    <p>4월 울릉도는 미정입니다.</p>
+</body> 
+</html>

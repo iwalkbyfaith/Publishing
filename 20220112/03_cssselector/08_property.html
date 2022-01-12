@@ -1,0 +1,35 @@
+<!-- property
+    
+    문법 : 태그명[property명]
+    해당 property를 가진 요소만 잡아서 적용해준다.
+
+    하나는 클래스가 있고, 하나는 클래스가 없는 h1 => 클래스만 있는 애들만 작용됨.
+
+    보통은 아이디나 클래스명으로 확실하게 사용함. 잘 쓰이지는 않는다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*전체 선택자로 margin:0을 줘보세요*/
+            * {margin:0;}
+        
+        /* h1에서 클래스가 있는 애들한테만 적용 */
+            h1[class]{color:blue;}
+        
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="logo">서울특별시</h1>
+    <p>인구 1000만은 깨졌지만 여전히 많이 삽니다.</p>
+
+    <h1>경기도</h1>
+    <p>서울을 감싸고 있습니다.</p>
+</body>
+</html>

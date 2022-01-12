@@ -1,0 +1,50 @@
+<!-- 가상 선택자
+
+    문법 : a:hover
+        a 태그 위에 마우스가 올려졌을 때(그 동안만) 적용할 변화를 설정한다.
+    어떤 요소에 마우스가 올려졌거나, 클릭했을때 색이 바뀌게 하기.
+
+    문법 : a:active
+        a 태그를 클릭하는 순간에 적용할 변화를 설정한다.
+
+    문법 : a.link
+        클릭된 적이 없는 상태의 a 태그에 적용할 내용을 설정한다.
+    
+    문법 : a.visited
+        방문한 적이 있는 a 태그에 적용할 내용을 설정.
+    
+    hover.active 등은 a가 아닌 태그에도 적용된다.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {margin:0;}
+        a:link {color:seagreen;}
+        a:visited {color:silver;}
+        a:hover {color:gold;}
+        a:active {color:salmon;}   
+        
+        h1:hover {color:violet;}
+        h1:active {color:blue;}
+            /*h1이 클릭할 수 있는 대상이 아님에도 변화하는 것을 볼 수 있음.*/     
+    </style>
+    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>한국ICT인재개발원</h1>
+    <ul>
+        <li><a href="http://lib.seoul.go.kr">회사소개</a></li>
+        <li><a href="#">강의소개</a></li>
+        <li><a href="#">문의하기</a></li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- 이름 선택자
+
+    문법 : #아이디명 {css구문}
+    id 선택자는 태그명과는 상관 없이 특정 태그에 부여된 아이디만을 고려해 css를 적용하낟.
+    이때, id에는 동일한 이름을 2개 이상 태그에 동시에 부여하지 않는 것이 원칙이다.
+        문서 전체에 id=title인 것을 딱 하나만 만들어야한다.
+        문법적으로 불가한 것은 아니지만, CSS를 사용하는 작업자들 사이에 암묵적인 룰이라고 함.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #content {color:gold;}
+        #title {color: crimson;}
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id 선택자</title>
+</head>
+
+<body>
+    <!-- 둘 다 p태그이지만 id가 다른 상태 -->
+    <p id="title">css 잘 하는법</p>
+    <p id="content">css를 많이 쳐봅니다.</p>
+</body>
+</html>
