@@ -1,0 +1,55 @@
+<!--폰트 연습
+    
+    문법 : 태그 {font : 기본크기 "글꼴명", 영문글꼴 }
+
+    폰트 관련 설정은 좀 더 상세하게 나눌 수 있다.
+        font-family : 서체
+        font-size   : 크기
+        font-weight : 두껍게
+        font-style  : 기울이기
+        color  : 색상
+    
+    CSS는 위에서 밑으로 코드가 진행되기 때문에, 가장 밑에 있는 것이 가장 강하게 적용된다.
+        body에서 적용 -> h1에 적용 ==> 같은 항목에 대해서 h1에 적용된게 우선
+
+    h1에 적용한 항목들을 하나의 속성인 font에 다 때려 넣을 수도 있다.
+        font 위에 마우스를 갖다 대면 총 문법이 나옴.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* 보통 사용하는 방법 */
+        body {font : 15px "굴림", Gulim;}
+        
+        /* 상세하게 나누기 */
+        h1{
+            font-family: "명조", serif;
+            font-size : 50px;
+            font-weight: bold;
+            font-style : italic;
+            color:sandybrown;
+        }
+
+        /* 한번에 적용하기 */
+        p {
+            font:bold italic 15px "굴림", Gulim;
+            color:green;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>국비반</h1>
+    <p>웹페이지를 만듭니다.</p>
+
+
+</body>
+</html>

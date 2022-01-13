@@ -1,0 +1,51 @@
+<!-- 인터넷에 있는 폰트 갖다 쓰기
+
+    먼저 구글폰트 https://fonts.google.com/ 에 접속
+    여기서 사용자 PC에 없는 글꼴을 가져다가 내 웹페이지에 적용할 수 있다.
+
+    1) 글꼴 선택
+    2) 페이지 안의 select this style을 클릭
+    3) use on the web에서 링크를 복사
+    4) link    => head 태그에(스타일 태그가 아님) 복붙
+       @import => style 태그 안에 넣기
+    5) style 태그에 .원하는이름 {CSS rules to specify families 밑의 내용을 복붙}해서 사용하면 됨.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- link는 헤드 태그에 style 태그 없이 복붙 !-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">   
+    <style>
+
+        /*폰트 설정시 글꼴은 하단의 font-family에 기입된 것을 가져다가 복사 붙여넣기 해서 쓴다.*/
+        .gg {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+
+        /* import 방식으로 하나 더 추가하기 */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300&display=swap');
+        
+         .other {
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="gg">내가 선택한 글꼴</h1>
+    <p class="gg">만든 곳이 어딘지 잘 모르겠음.</p>
+
+    <h1 class="other">Sans Condensed</h1>
+    <p class="other">적용이 된게 맞나요</p>
+</body>
+</html>

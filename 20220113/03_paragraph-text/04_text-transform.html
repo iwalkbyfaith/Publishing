@@ -1,0 +1,32 @@
+<!-- 대문자 소문자
+
+    적용된 태그 내 글자의 대소문자 여부를 관리한다.
+        capitalize 각 단어의 앞글자만 대문자로
+        uppercase  모든 글자를 대문자로
+        lowercase  모든 글자를 소문자로
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*각 단어의 앞글자만*/
+        .hp1 {text-transform: capitalize;}        
+        /*모두 대문자*/
+        .hp2 {text-transform: uppercase;}
+        /*모두 소문자*/
+        .hp3 {text-transform: lowercase;}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>happy BIRTHDAY to YOU!!!</p>
+    <p class="hp1">happy BIRTHDAY to YOU!!!</p>
+    <p class="hp2">happy BIRTHDAY to YOU!!!</p>
+    <p class="hp3">happy BIRTHDAY to YOU!!!</p>
+
+</body>
+</html>

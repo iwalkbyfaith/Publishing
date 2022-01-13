@@ -1,0 +1,49 @@
+<!-- ★ 패딩 
+
+    어떤 박스 공간의 경계와 실제 내부 요소간의 거리를 설정한다.
+    
+    값을 
+        한 개 적으면 상하좌우 4군데
+        두 개 적으면 (상하, 좌우) 거리순
+        네 개 적으면 12시 방향부터 시계 방향으로 적용된다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p {background-color: salmon;}    
+        
+        .answer1 {padding:15px;}                 /*하나만 넣어서 상하좌우 15px씩 확보한 것.*/
+        .answer2 {padding:50px 10px;}            /* 위아래로 50px, 좌우로 10px*/
+        .answer3 {padding:20px 30px 70px 20px;}  /* 위20 오른쪽30 아래70 왼쪽20 순*/
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>퍼블리싱은 무슨 일을 하는건가요?</p>
+    <p>
+        웹 페이지 레이아웃을 따고
+        보기 좋게 디자이너의 요구대로 꾸며주는겁니다.
+    </p>
+
+    <p class="answer1">
+        웹 페이지 레이아웃을 따고
+        보기 좋게 디자이너의 요구대로 꾸며주는겁니다.
+    </p>
+
+    <p class="answer2">
+        웹 페이지 레이아웃을 따고
+        보기 좋게 디자이너의 요구대로 꾸며주는겁니다.
+    </p>
+
+    <p class="answer3">
+        웹 페이지 레이아웃을 따고
+        보기 좋게 디자이너의 요구대로 꾸며주는겁니다.
+    </p>
+</body>
+</html>

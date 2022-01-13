@@ -1,0 +1,36 @@
+<!--수직 정렬 vertical-align
+
+    문법 : 태그 {vertical-align: 위치;}
+    ★폭을 널게 만드는 원인이 되는 요소에 걸어야 작동한다.
+
+    수직 방향으로 정렬할 때 사용한다.
+        top 상단 정렬
+        middle 가운데 정렬
+        bottom 하단 정렬
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*그냥 p {vertical-align: middle;} 라고 하면 안됨. 
+          img에 걸어주어야 텍스트가 가운데 정렬이 가능하다.
+          즉, 폭을 널게 만드는 원인이 되는 요소에 걸어야 작동한다.*/
+            p > img {vertical-align: middle;}
+            p > img {vertical-align: top;}
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--그림에 위치에 따라 텍스트의 높이가 위치하게 됨. 이 텍스트를 위나 중앙으로 옮겨주고 싶을 때 수직 정렬을 쓴다.-->
+    <p> 텍스트입니다.
+        <img src="img/미미.jpg" width="20%" height="15%">
+    </p>
+</body>
+</html>

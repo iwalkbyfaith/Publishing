@@ -1,0 +1,49 @@
+<!-- 경계선01
+
+    border = 테두리 처리
+
+    border는 특정 요소의 바깥쪽에 경계선을 그려준다.
+        border-color 테두리 색상
+        border-width 경계선 너비(px단위)
+        border-style 선의 종류
+            solid(실선), dashed(실점선), none => 많이 쓰임
+            dotted(원점선), double(이중선), groove, ridge, inset, outset
+        
+        border            너비 (네 방향)
+            border-top    너비 선종류 색상(위쪽만)
+            border-right  너비 선종류 색상(오른쪽만)
+            border-left   너비 선종류 색상(왼쪽만)
+            border-bottom 너비 선종류 색상(아래쪽만)
+            모두 선종류와 색상은 생략 가능하고, 생략시 solid black으로 적용됨.
+
+        background:url("그림파일명")
+            해당 그림이 배경에 깔린다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font:12px "굴림", Gulim;
+            background:url("img/bg_grid.gif")  /*작은 것 한 칸이 10px*/
+        }
+
+        p{
+            padding: 10px 20px;
+            border-top: 4px solid brown;
+            border-left: 5px outset gold;
+            border-bottom: 4px solid brown;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>CSS는 그래픽 프로그램보다 우수합니다.(아님)</p>
+
+</body>
+</html>
