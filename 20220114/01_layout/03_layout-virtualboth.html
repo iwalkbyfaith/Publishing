@@ -1,0 +1,96 @@
+<!-- 레이아웃 virtualboth 가상해제 :after
+    
+    green과 coffee는 container의 하위 영역이지만,
+    각각 배경색을 적용하기 전인데도 float을 걸었을 때, 배경색이 사라진다.
+
+    밑에 다른 요소가 있다면 clear:both로 해제하겠지만, 없음. (밑에 빈 요소를 만들어서 사용해도 되긴 함)
+        근데 만들었을 때, 새로운 요소도 블록태그 요소이기 때문에 한 줄을 잡아먹어서
+        나중에 레이아웃을 짤 때 문제가 발생한다.
+    
+    Q) container의 height을 조정하는 방법이 있지 않나?
+        A) 커피나 녹차에 내용을 더 추가 했을때 또! container의 height을 조정해야한다.
+    
+    ★
+    원래는 float을 걸고 해제를 할 때, float 다음에 올 요소가 있다면 그냥 해제하면 되지만
+    만약에 float이 마지막 요소여서 clear를 걸어줄 환경이 되지 못한다면,
+    가상 요소인 :after를 활용해서 가상의 박스를 하나 더 부여해 해제해야 한다.
+
+    다음 요소가 없어서 float을 해제하지 못하는 경우, 
+    float 요소의 '배경'이 되는 태그의 속성이 제대로 실행되지 않는다.
+    따라서 존재하지는 않지만 가상으로 다른 요소가 있는 것처럼 설정한 다음 float을 해제해주면 된다.
+
+    (기억하자) 레이아웃 딸 때 공식
+        1) float으로 싹 배치
+        2) clear:both로 해제한다.
+        3) 나머지 꾸미기 (디자인 영역)
+
+    
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #container{
+            width: 600px;
+            padding: 10px;
+            background-color: #fdd;
+        }
+        /*green과 coffee는 container의 하위 영역이지만,
+          각각 배경색을 적용하기 전인데도 float을 걸었을 때, 배경색이 사라진다.*/
+        .green {
+            float: left;
+            width: 250px;
+            background-color: #dda;
+        }
+        .coffee{
+            float: right;
+            width: 250px;
+            background-color: #ba7;
+        }
+
+        /*가상 해제
+            container밑에 박스가 없지만 있는척 하기*/
+            #container:after {
+                clear:both;     /*가상 요소에서 위의 float을 clear 해줌*/
+                display: block; /*그 다음 이 요소는 블록태그라고 명시해준다. <=여기까지 적어도 변화 없음.*/
+                content:""; /* 실체가 없으면 적용이 안되니까 여기다가 아무 내용도 없는("") content를 추가
+                               만약 진짜 내용을 적으면 페이지 상에 뜬다. 근데 가상요소여서 페이지에서 선택이 안됨.*/
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>녹차와 커피</h1>
+        <div class="green">
+            <p>
+                녹차는 은은한 향을 좋아하는 사람들이
+                애용하는 차인데 녹차를 마실줄 모르는
+                사람들은 그냥 대충 티백만 우려내고 마는데,
+                녹차를 좋아하는 사람들은 티백을 뜯어서
+                찻잎을 다시 적절하게 보관하기도 합니다.
+                하지만 이렇게 해야만 녹차매니아는 아니고
+                그저 자기가 좋아하는 방법으로 마시는게
+                제일 아닐까 합니다.
+            </p>
+        </div>
+        <div class="coffee">
+            커피는 독한 향을 좋아하는 사람도 좋아하고
+            심지어 어릴때부터 자주 먹은 사람들은
+            내성까지 생기는 경우가 있습니다.
+            예전에는 시럽이나 뭔가 첨가물이 들어간
+            믹스커피 등이 인기가 많았지만 요즘은
+            그냥 커피 자체를 우려낸 아메리카노도
+            각광받고 있습니다.`
+            그러나 못 먹는 사람들도 있기 떄문에
+            항상 카페등의 모임을 가질때는
+            다른 음료 메뉴가 있는지 확인하면 좋습니다.
+        </div>
+    </div>
+</body>
+</html>
