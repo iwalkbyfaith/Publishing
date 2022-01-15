@@ -14,7 +14,7 @@
             border-right  너비 선종류 색상(오른쪽만)
             border-left   너비 선종류 색상(왼쪽만)
             border-bottom 너비 선종류 색상(아래쪽만)
-            모두 선종류와 색상은 생략 가능하고, 생략시 solid black으로 적용됨.
+            
 
         background:url("그림파일명")
             해당 그림이 배경에 깔린다.
@@ -25,15 +25,17 @@
 <head>
     <style>
         body {
+            width: 300px;
             font:12px "굴림", Gulim;
             background:url("img/bg_grid.gif")  /*작은 것 한 칸이 10px*/
         }
 
         p{
+            width:300px;
             padding: 10px 20px;
             border-top: 4px solid brown;
             border-left: 5px outset gold;
-            border-bottom: 4px solid brown;
+            border-bottom: 4px solid green;
         }
     </style>
 
@@ -44,6 +46,5 @@
 </head>
 <body>
     <p>CSS는 그래픽 프로그램보다 우수합니다.(아님)</p>
-
 </body>
 </html>
