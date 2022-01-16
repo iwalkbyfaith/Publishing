@@ -1,0 +1,73 @@
+<!-- 레이아웃 연습-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { width: 700px; }
+        #header {
+            border: 5px solid gray;
+            height: 100px;
+            background: url("/20220113/04_box/img/bg_grid.gif")
+        }
+            .button li {
+                display: inline;
+                margin: 50px;
+                padding: 5px;
+                border: 1px solid black;
+            }
+
+            .button a {
+                text-decoration: none;
+            }
+            a:hover { color : rgb(132, 179, 123);}
+        #container {
+            border: 5px solid;
+            height: 400px;
+        }
+        #container div {display: inline-block;}
+            .leftsidebar{
+                background-color: rgb(219, 139, 139);
+                width: 100px;
+                height: 400px;
+                margin-left: 10px;
+            }
+            .contents{
+                background-color: rgb(147, 147, 200);
+                width: 400px;
+                height: 400px;
+                margin: 0px 5px;
+            }
+            .rightsidebar{
+                background-color: rgb(137, 161, 137);
+                width: 150px;
+                height: 400px;
+            }
+        #footer {
+            border: 5px dotted;
+            height: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <ul class="button">
+            <li><a href="#">버튼1</a></li>
+            <li><a href="#">버튼2</a></li>
+            <li><a href="#">버튼3</a></li>
+            <li><a href="#">버튼4</a></li>
+        </ul>
+    </div>
+    <div id="container">
+        <div class="leftsidebar"></div>
+        <div class="contents"></div>
+        <div class="rightsidebar"></div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
