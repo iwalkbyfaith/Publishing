@@ -1,0 +1,49 @@
+<!-- 변수
+
+    변수 작성시 주의할 점
+        1. 대소문자 구분함. var Num1 != var num1;
+        2. 변수명 맨 앞에서는 영문자, _, $를 사용할 수 있음.
+        3. 변수명에는 $, _, 영문자, 숫자를 쓸 수 있음.
+
+    변수에 저장 가능한 데이터의 종류
+        1. 문자열        - 큰 따옴표나 작은 따옴표로 감싼 자료 (둘 다 문자열)
+        2. 숫자          - 숫자로만 입력된 자료
+        3. 논리(bool)    - true, false
+        4. null형 데이터 - null로 작성되는 빈 데이터
+    
+    세미콜론을 찍지 않아도 에러가 뜨지는 않지만, 붙이는 것을 권장함.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 문자열은 "",'' 상관없이 아무거나 사용해도 됨. (콘솔에 검정색으로 표시됨.)
+        var txt1 = "자바스크립트";
+        var txt2 = '10';
+        console.log(txt1);
+        console.log(txt2);
+
+        // 대소문자 구분함 (콘솔에 파란색으로 표시됨)
+        var num = 10;
+        var Num = 25;
+        console.log(num);
+        console.log(Num);
+
+        // bool 자료형도 가능
+        var result = true;
+        console.log(result);
+
+        // null형 데이터 (콘솔에 회색으로 표시됨)
+        result = null;
+        console.log(result);
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--레이아웃 실습
+    
+    display나 float을 사용해 3단 레이아웃 만들기-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{ width: 600px;}
+       
+        #header {
+            border: 2px dotted red;
+            height: 100px; width: 600px;
+        }
+        #content {
+            width: 600px;
+            height: 400px;
+            border: 2px solid blue;
+        }
+            #content div {display: inline-block;}
+            .leftsidebar{
+                border: solid green 1px;
+                height: 400px; width: 150px;
+            }
+
+            .contents{
+                border: solid violet 1px;
+                height: 400px; width: 280px;
+            }
+            .rightsidebar{
+                border: solid 1px green;
+                height: 400px; width: 150px;
+            }
+        #footer{
+            border: green 2px dashed;
+            height: 100px; width: 600px;
+            
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">헤더</div>
+    <div id="content">
+        <div class="leftsidebar">왼</div>
+        <div class="contents">컨텐츠</div>
+        <div class="rightsidebar">오른</div>
+    </div>
+    <div id="footer">푸터</div>
+</body>
+</html>
