@@ -1,0 +1,37 @@
+<!--
+
+    prompt를 이용해 입력 받은 숫자에 해당하는 단수의 구구단을 출력하는 코드를 만들어주세요.
+    
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var num = prompt("단수를 입력해주세요");
+
+        for(var i=1; i <10; i++){
+
+            if(num>=2 & num <10){
+                document.write(num + ' * ' + i + " = " + num * i + "<br/>");
+            }else{
+                document.write("2에서 9 사이의 값을 넣어주세요");
+                break;
+            }
+        }
+
+        // 선생님은 if 안에 for을 넣으심(그러면 break 안 써도 됨)
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
