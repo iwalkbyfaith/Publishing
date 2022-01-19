@@ -1,0 +1,66 @@
+<!-- Math 문제
+
+    1. img 폴더를 02_jsobjec 폴더 내부에 만들어주세요.
+    2. 그림파일 3개를 안에 다운 받아 주시고
+    3. 파일 명은 img0, img1, img2로 해주세요.
+    4. 난수 발생을 통해 그림 파일 3개가 랜덤하게 화면에 표시되도록 코드를 작성해주세요.
+    5. 완성된 코드를 보내주세요
+
+    ★ document.write() 안에 이미지 파일 넣는 법★
+
+        document.write (   "<img src='주소' width='넣고' height='넣고' />"   );
+    
+            쌍따옴표를 쓰면 컴터가 닫아버리는걸로 인식해서 홑따옴표 ''를 사용한 것. (선생님 추천)
+            아니면 역슬래시와 사용해도 된다. (\" 이런식으로.)
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 두번째 시도
+        // 선생님이 if문 안쓰고 하는 방법 있다고 해서 시도(됨)
+        var ranNum = Math.floor((Math.random() * 3)) ;
+        document.write("<img src='img/img" + ranNum + ".jpg' width='500px'/>")
+
+
+
+
+        // 첫번째 시도
+        // var ranNum = (Math.random() * 3) ;
+
+        // if(ranNum >= 2){
+        //     document.write("현재 난수는 : " + ranNum + "<br/>");
+        //     document.write("<img src='img/img2.jpg' width='500px'/>");
+
+        // }else if(ranNum >=1){
+        //     document.write("현재 난수는 : " + ranNum + "<br/>");
+        //     document.write("<img src='img/img1.jpg' width='500px'/>");
+
+        // }else if(ranNum >=0){
+        //     document.write("현재 난수는 : " + ranNum + "<br/>");
+        //     document.write("<img src='img/img0.jpg' width='500px'/>");
+        // }
+
+
+        // 선생님 답 (캬캬 맞았단)
+        // 0 ~ 1의 값을 곱하기 3을 해서 0 ~ 3 사이로 만들고 내림처리를 하면 0, 1, 2가 됨
+        // var imgNum = Math.floor(Math.random() * 3);
+        // document.write("<img src='img/img" + imgNum + ".jpg' width='500px'/>")
+
+        // 다른 방법?
+            // 1) array로 처리할 수도 있고(지금처럼 이름이 0,1,2 이런식 말고 중구난방일때 어레이를 사용하는 듯)
+            // 2) 캐스팅 할 수도 있는듯. (이건 아리까리)
+
+        
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- continue
+
+    continue문은 만나는 즉시 돌던 바퀴만 종료시키고 다시 다음바퀴를 실행하는 구문입니다.
+    주로 특정 조건을 만족할 때 반복구간을 스킵시키는 용도로 많이 사용합니다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 1~9까지 중에 홀수만 출력하는 코드를 작성해보세요.
+
+        // if문의 조건이 짝수일때 continue의 위치
+        for(var i = 1; i < 10; i++){
+            if(i % 2 === 0){
+                continue;
+            }
+            document.write(i + "<br/>");
+        }
+
+        // if문의 조건이 홀수일 때 continue의 위치
+
+        for(var j = 1; j < 10; j++){
+            if(j % 2 ===1){  // 이렇게 써도 됨 j % 2 !== 0
+                document.write(j + "<br/>");
+            }
+            continue;
+        }
+
+    </script>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

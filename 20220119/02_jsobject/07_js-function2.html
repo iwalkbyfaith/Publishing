@@ -1,0 +1,76 @@
+<!-- 함수 function 2)
+
+    
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+        // num 변수는 함수의 밖에 입력됨.
+        var num = 0; // 그림번호
+
+        // 사진을 앞으로 돌리는 로직
+
+            function nextPic(){
+                num++; // 다음 그림 번호로 이동
+                if(num>2){ // 마지막 그림번호 초과시
+                    num = 0; // 첫 그림 번호로 되돌리기
+                }
+                // id가 pic인 애 전체를 들고 와라.
+                // <img width="500px" src="img/img0.jpg" id="pic"> 이 코드를 들고 오는 것
+                console.log(document.getElementById("pic"));
+
+                // .src로 새롭게 대입을 해줌
+                document.getElementById("pic").src = "img/img" + num + ".jpg" ;
+                    // id가 pic인 요소(그림)의 src 속성을 1 증가된 num을 이용해 바꿔줌
+            
+                // 그림파일 조정(width = "300px"로 수정)
+                // document.getElementById("pic").width = "300";
+
+                return false;
+                // 그림 변경 후 링크 이동을 막기 위해 사용
+            
+            }
+
+        // 문제1 : prevPic 함수를 만들어서 사진을 뒤로 돌리는 로직도 추가해주세요.
+            
+            function prevPic(){
+                num--;;
+
+                // num이 0보다 작아질 때, 2가 되게 하는 로직
+                if(num < 0){
+                    num =2;
+                }
+                // id가 pic인 애 전체를 들고 와라.(F12에서 확인)
+                console.log(document.getElementById("pic"));
+
+                // .src로 새롭게 대입을 해줌
+                document.getElementById("pic").src = "img/img" + num + ".jpg" ;
+
+                // 링크 이동 막기
+                return false;
+
+
+            }
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이미지 넘기기</h1>
+
+    <img width="500px" src="img/img0.jpg" id="pic">
+
+    <a href="#" onclick="prevPic()">  <<이전 이미지 </a> <br/>
+    <a href="#" onclick="nextPic()"> 다음 이미지>> </a>
+
+
+</body>
+</html>

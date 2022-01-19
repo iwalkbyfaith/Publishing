@@ -1,0 +1,78 @@
+<!-- 배열 Array
+
+    배열은 Array()를 활용해 다음과 같이 만듭니다.
+        var nameList = new Array();
+
+    데이터 저장
+        자바스크립트의 특징 : 길이가 없음
+        nameList[0] = "자바스크립트";
+        인덱싱을 없는 번호로 해도 됨 -> 에러는 안뜨고 대신 화면에 undefined라고 뜸
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 배열 만들기(빈 배열)
+            var nameList = new Array();
+
+        // 인덱싱을 이용한 데이터 저장
+            nameList[0] = "자바스크립트";
+            nameList[1] = "스프링";
+            nameList[2] = "JSP";
+            nameList[3] = "JAVA";
+            nameList[4] = "JPA";
+            document.write(nameList[0] + "<br/>");
+        
+            // 넣는대로 들어가서 심지어 이런 것도 됨. 
+            // 5~9번을 비워두고 만들 수 있음. 다른 언어는 안됨
+                nameList[10] = "Spring Security"
+
+        // 확인
+        // 결과창 : 자바스크립트,스프링,JSP,JAVA,JPA,,,,,,Spring Security
+        // 비어있는 공간을 제외하고 출력.
+            document.write(nameList + "<br/>");
+
+
+        // 저장공간의 크기를 지정해 생성하기
+            var score = new Array(4);
+            score[0] = 50;
+            score[1] = 68;
+            score[2] = 24;
+            score[3] = 89;
+            document.write(score + "<br/>");
+
+        
+        // 생성하면서 데이터까지 넣는 경우
+            var days = new Array("일", "월", "화", "수", "목", "금", "토");
+            document.write(days[5] + "<br/>");
+
+
+        // Q) 만들어진 days 배열과, new Date()로 생성한 객체를 활용해서
+        // .getDay()로 얻어오는 요일이 숫자가 아닌 요일명으로 표기되도록 처리해보세요.
+
+            var today = new Date();
+            var nowDay = today.getDay();
+            document.write("요일 : " + days[nowDay] + "<br/>");
+
+        // 나중에 array에 메서드를 넣어서 반복문 for를 사용해서 년, 월, 일, 시, 분, 초를 출력하는거 만들어봐야지. 메서드도 들어가려나?
+        
+        
+
+
+
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

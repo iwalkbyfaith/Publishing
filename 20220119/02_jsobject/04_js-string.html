@@ -1,0 +1,85 @@
+<!-- String
+
+    (★★★★★  매우 중요  ★★★★★)
+
+    자바스크립트도 문자열을 다룰 수 있습니다.
+    그래서 문자열을 다루거나 문자열을 생성하기 위해 String이라는 객체를 만들어 사용합니다.
+
+
+    보편적인 생성법
+        var str1 = new String("자바스크립트");
+
+    간소화된 생성법
+        var str2 = "자바스크립트";
+        var str2 = '자바스크립트';
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 생성법
+            var str1 = new String("자바스크립트");
+            var str2 = "자바스크립트";
+
+        
+        
+        // 실제 활용
+            var text = "Javascript is good";
+
+            // 볼드 처리 .bold()
+            document.write(text.bold() + "<br/>");
+            
+            // 링크 생성 .link(주소) (a태그로 만들어주는 효과)
+            document.write(text.link("https://naver.com") + "<br/>");
+
+            // ★ 문자 길이 .length
+            document.write(text.length + "<br/>");
+
+            // 전부 다 소문자로 .toLocaleLowerCase()
+            document.write(text.toLocaleLowerCase() + "<br/>");
+
+            // 전부 다 대문자로 .toUpperCase()
+            document.write(text.toUpperCase() + "<br/>");
+
+            // 해당 문자의 순번 .indexOf(해당문자)
+            document.write(text.indexOf("i") + "<br/>");
+
+            // 뒤에서부터 세었을때 몇번째? .lastIndexOf(해당문자)
+            document.write(text.lastIndexOf("i") + "<br/>");
+
+            // 해당 인덱스에 무슨 문자가 있는지(0부터 시작) .charAt()
+            document.write(text.charAt(5) + "<br/>" );
+           
+            // 범위지정(x번부터 y번까지) .substring(x,y) 
+            document.write(text.substring(4,6) + "<br/>");
+
+            // 범위지정(x번부터 y글자) .substr(x,y) 
+            document.write(text.substr(10,3) + "<br/>");
+
+            // ★ 찾아 바꾸기 .replace(x, y)
+            document.write(text.replace("good", "great") + "<br/>");
+
+            // 추가로 붙여주기 .concat("문자")
+            document.write(text.concat("......?") + "<br/>");
+
+            // ★ 쪼개기 .split("쪼개는 기준")
+            document.write(text.split(" ") + "<br/>");
+
+
+
+
+
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
