@@ -1,6 +1,6 @@
 <!-- 함수 function 2)
 
-    
+    클래스 안에 있는 함수는 메서드, 클래스 밖에 있는 함수는 함수??
 
 -->
 
@@ -27,13 +27,13 @@
                 document.getElementById("pic").src = "img/img" + num + ".jpg" ;
                     // id가 pic인 요소(그림)의 src 속성을 1 증가된 num을 이용해 바꿔줌
             
-                // 그림파일 조정(width = "300px"로 수정)
-                // document.getElementById("pic").width = "300";
+                // 그림파일 조정(width = "400px"로 수정)
+                document.getElementById("pic").width = "400";
 
                 return false;
                 // 그림 변경 후 링크 이동을 막기 위해 사용
             
-            }
+            } 
 
         // 문제1 : prevPic 함수를 만들어서 사진을 뒤로 돌리는 로직도 추가해주세요.
             
@@ -44,8 +44,8 @@
                 if(num < 0){
                     num =2;
                 }
-                // id가 pic인 애 전체를 들고 와라.(F12에서 확인)
-                console.log(document.getElementById("pic"));
+                // // id가 pic인 애 전체를 들고 와라.(F12에서 확인)
+                // console.log(document.getElementById("pic")); 이게 없어도 되네?
 
                 // .src로 새롭게 대입을 해줌
                 document.getElementById("pic").src = "img/img" + num + ".jpg" ;
@@ -66,7 +66,7 @@
 <body>
     <h1>이미지 넘기기</h1>
 
-    <img width="500px" src="img/img0.jpg" id="pic">
+    <img width="600px" height="600px" src="img/img0.jpg" id="pic"> <br/>
 
     <a href="#" onclick="prevPic()">  <<이전 이미지 </a> <br/>
     <a href="#" onclick="nextPic()"> 다음 이미지>> </a>

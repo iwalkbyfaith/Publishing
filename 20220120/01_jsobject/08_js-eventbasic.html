@@ -1,0 +1,85 @@
+<!-- 이벤트 기초 
+
+    자바스크립트에서는 다양한 방식으로 이벤트를 통제할 수 있습니다.
+    아래 이벤트 함수들을 모두 자주 쓰는 것은 아니지만
+    한 번 정리해보고 실습해보겠습니다
+
+        onload          = 문서가 모두 로드되면 이벤트 발생(우선순위:가장마지막)★
+        onunload        = 문서 종료시 이벤트 발생
+        ondblclick      = 해당 요소를 더블 클릭시 발생
+        onclick         = 해당 요소를 한 번 클릭시 발생 ★
+        onkeypress      = 해당 키를 눌렀을 때 발생
+        onkeydown       = 해당 키가 눌려졌을때 발생(위와 거의 동일)
+        onkeyup         = 해당 키를 눌렀다 뗄 때 발생
+        onmouseover     = 마우스 커서가 대상에 올려지면 발생
+        onfocus         = (탭키 등으로) 해당 요소가 타겟으로 잡힐 때 발생
+        onmouseout      = 대상에서 마우스 커서가 벗어나면 발생
+        onblur          = onfocus 상태에서 벗어나면 발생
+        onsubmit        = 전송 버튼을 눌렀을 때 발생 ★
+        onreset         = 취소 버튼을 눌렀을 때 발생
+        onchange        = 입력요소 값이 변경되면 발생 ★
+        onmousemove     = 마우스를 움직일 때마다 발생
+        onresize        = 브라우저 창 크기가 조절 될 때 발생
+        onerror         = 문서 이미지 불러오는 도중 에러 발생시 발생
+        onabort         = 문서 이미지 불러오다 중단되면 발생
+
+        on + 행동
+
+        검색 키워드 : 파싱(구문번석)
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // // (문제 상황) 코드 로딩 전 요소를 받아오려다 null이 나는 방식
+        //     // #noData를 변수 h1Tag에 저장해주신 다음 콘솔에 찍어보세요 (콘솔 결과 : null)
+        //         var h1Tag = document.getElementById("noData");
+        //         console.log(h1Tag);
+        //         // 코드는 위에서 아래로 진행되기 때문에 밑의 id="noData"가 인식이 되기 전에 37번이 실행된 것임.
+        //         // h1태그가 인식되기 전에(아래쪽 코드를 읽기 전에) JS코드가 먼저 실행되면서(body태그 위쪽에 있으므로) 인식이 안되어 null이라고 나옴.
+        //     // 이 것을 막을 방법은?(해결방법1, 2)                
+
+
+        // 해결 방법2) 굳이굳이 위에 코드를 입력하고 싶은 경우.
+        //             코드 로딩 후에 데이터를 얻어오도록 처리(window.onload 사용)
+
+            //window.onload = 함수(){ ==> 이 구문이 위에 있든, 아래있든 상관없이 무!조!건! 가장 마지막에 실행됨
+            //    실행문;
+            //}
+            
+            window.onload = function(){
+                var h1Tag = document.getElementById("noData");
+                console.log(h1Tag);
+            }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+    <h1 id="noData">테스트</h1>
+    
+
+    <!-- <script>
+        // 해결 방법1) (권장사항)
+            // body 태그 내부 모든 요소를 다 로딩한 다음 코드가 실행되도록, (코드는 위에서 아래로 실행되니까)
+            // body태그 제일 하단에 script 태그를 작성하는 해결방법이 있음
+            var h1Tag = document.getElementById("noData");
+            console.log(h1Tag);
+
+            // (해결방법1의 문제) 이렇게 되면 바디 태그 안에 스크립트 태그를 넣어야하기 때문에 지저분해 보임.
+            // 그래서 스크립트 태그 내에서 해결하고 싶은 경우에는 해결방법2가 있음
+            // 해결방법2)를 실행하기 위해서 주석처리함.
+    </script> -->
+
+
+
+</body>
+</html>
