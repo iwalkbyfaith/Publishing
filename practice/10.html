@@ -8,11 +8,13 @@
         body { 
             background-color: rgb(228, 218, 218);
             width: 600px;
+            height: 600px;
         }
         #container { width: 600px;}
         #header { 
             background-color: rgb(182, 173, 185);
             padding: 20px;
+            width: 600px;
         }
         
         ul { list-style: none;}
@@ -36,14 +38,25 @@
             float: left;
             width: 400px;
             height: 400px;
+            margin-left: 20px;
+
         }
         #footer {
             clear:both;
+            width: 600px;
         }
+        h1 + p {text-align: justify;}
     </style>
+
     <script>
-        func(){
-            alert("로그인 하셨나요?");
+        function login(){
+            var answer = confirm("로그인 하셨나요?");
+            if(answer){
+                alert("환영합니다!")
+            }else{
+                alert("더이상 이용하실 수 없습니다.")
+                document.write("로그인하고 이용하세요");
+            }
         }
     </script>
     <meta charset="UTF-8">
@@ -55,22 +68,22 @@
     
     <div id="header">
         <ul>
+            <li><a href="#"><<</a></li>
             <li><a href="#">메뉴1</a></li>
             <li><a href="#">메뉴2</a></li>
-            <li><a href="#">메뉴3</a></li>
-            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">>></a></li>
         </ul>
     </div>
 
     <div id="container">
         
         <div class="left">
-            <h3><button onclick="func()">로그인</button></h3>
+            <h3><button onclick="login()">로그인 확인</button></h3>
         </div>
 
         <div class="content">
             <div>
-                <h1>컨텐츠1</h1>
+                <h1>컨텐츠1</h1><br/>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
         </div>
@@ -82,7 +95,7 @@
 
 
     <div id="footer">
-        <address> 주소는 주소주소 입니다.</address>
+        <address style="background-color: rgb(182, 173, 185); text-align: right;"> ⓒ DANI Corp.</address>
     </div>
 
 
