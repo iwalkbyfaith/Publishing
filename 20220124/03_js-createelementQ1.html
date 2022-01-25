@@ -16,14 +16,15 @@
         window.onload = function(){
 
             
-            var createh1Tag = document.getElementById("createh1");
+            var createh1Btn = document.getElementById("createh1");
             var h1spaceTag = document.getElementById("h1space");
 
-            createh1Tag.onclick = function(){
+            createh1Btn.onclick = function(){
                 var h1Tag = document.createElement("h1");
                 var text1 = document.createTextNode("h1안에 들어갈 텍스트");
+                h1Tag.appendChild(text1);
                 h1spaceTag.appendChild(h1Tag);
-                h1Tag.appendChild(text1);                
+                                
             }
             
 
