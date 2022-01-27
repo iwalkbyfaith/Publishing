@@ -1,0 +1,162 @@
+<!-- 그리드 시스템
+
+하나의 가로줄은 열 두개로 나눌 수 있다. (가로줄 = 12로 잡고 비율로 나누는 것)
+    레이아웃을 딸 때 8:4 / 4:4:4 / 6:6 이런식으로 나누는 것
+    만약 7:3으로 나눈다면 2칸이 남음
+
+★ 바디 태그 아래에 div class = "container"를 반드시 하나 만들고 시작해야한다. (감싸주는 역할)
+  
+div class ="row"가 한 줄임. 지금 여기서는 container 사이에 row가 6개가 있음.
+    원래 일반 html에서는 div 안에 div로 만들었을때는 일렬로 만들려면 float을 써야 하거나
+    다음줄로 내려갈때 both:clear로 풀어줘야 했는데 부트스트랩은 그런게 없음.
+    부트 스트랩은 클래스를 써서 내부 요소를 컨트롤한다.
+    바디 태그 내에서 "col-md-4"인 것을 "col-md-3"으로 바꾸면 한칸이 줄어든다.
+    부트스트랩에서는 한 row의 합산이 12가 되게 레이아웃을 짜면 되는 것
+    (12가 안되면 그만큼 빈 공간으로 처리되고, 12를 오버하면 다음 줄로 내려감)
+  
+
+div가 많기 때문에 주석으로 끝나는 부분임을 적어준다.
+  
+
+
+-->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap</title>
+
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .col-xs-1,
+    .col-sm-1,
+    .col-md-1,
+    .col-lg-1,
+    .col-xs-2,
+    .col-sm-2,
+    .col-md-2,
+    .col-lg-2,
+    .col-xs-3,
+    .col-sm-3,
+    .col-md-3,
+    .col-lg-3,
+    .col-xs-4,
+    .col-sm-4,
+    .col-md-4,
+    .col-lg-4,
+    .col-xs-5,
+    .col-sm-5,
+    .col-md-5,
+    .col-lg-5,
+    .col-xs-6,
+    .col-sm-6,
+    .col-md-6,
+    .col-lg-6,
+    .col-xs-7,
+    .col-sm-7,
+    .col-md-7,
+    .col-lg-7,
+    .col-xs-8,
+    .col-sm-8,
+    .col-md-8,
+    .col-lg-8,
+    .col-xs-9,
+    .col-sm-9,
+    .col-md-9,
+    .col-lg-9,
+    .col-xs-10,
+    .col-sm-10,
+    .col-md-10,
+    .col-lg-10,
+    .col-xs-11,
+    .col-sm-11,
+    .col-md-11,
+    .col-lg-11,
+    .col-xs-12,
+    .col-sm-12,
+    .col-md-12,
+    .col-lg-12 {
+      border: 1px solid red;
+      padding: 10px;
+    }
+
+    .row {
+      margin-bottom: 4px;
+      margin-top: 4px;
+    }
+  </style>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!--
+   # container 클래스가 하는 일은 전체 레이아웃을 감싸는 역할을 합니다.
+   # container-fluid클래스를 사용하면 전체 화면을 전부 사용할 수 있습니다.
+  -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">1번째 박스</div>
+      <div class="col-md-4">2번째 박스</div>
+      <div class="col-md-4">3번째 박스</div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+      <div class="col-md-1">.col-md-1</div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">.col-md-8</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div><!-- div row-->
+    <div class="row">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div><!-- div row-->
+    <div class="row">
+      <div class="col-md-6">.col-md-6</div>
+      <div class="col-md-6">.col-md-6</div>
+    </div><!-- div row -->
+
+    <div class="row">
+      <div class="col-md-7">7</div>
+      <div class="col-md-3">3</div>
+    </div>
+
+    <!-- 아래에 row를 하나 더 추가해 주시고 3:2:1:4:2로 구성하세요.-->
+
+    <div class="row">
+      <div class="col-md-3">3</div>
+      <div class="col-md-2">2</div>
+      <div class="col-md-1">1</div>
+      <div class="col-md-4">4</div>
+      <div class="col-md-2">2</div>
+    </div> <!-- div row-->
+
+
+  </div><!-- div container -->
+</body>
+
+</html>

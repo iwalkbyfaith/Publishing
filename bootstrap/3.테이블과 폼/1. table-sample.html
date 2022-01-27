@@ -1,0 +1,177 @@
+<!-- 테이블 만들기
+
+  원래 하던데로 테이블 데이터를 만들어 놓고
+  class="table"과 같은 옵션만 달아주면 된다.
+  공식 사이트에도 예시가 다 나와있으니, 이 파일이 없을때 홈페이지를 참고하면 된다.
+  
+-->
+
+
+
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩 코드와 테이블   </title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom2.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">
+ <h4 class="text-primary">기본 table 코드  </h4>
+ <table border="1">
+    <!-- table에다가 class="table"이라고 적어주면 바로 예쁘게 변함(부트스트랩 기본 기능)-->
+  <thead> 
+    <!--안써도 되지만 't'able 'head'를 붙이기도 한다.
+        가독성을 위해서 thead와 tbody를 쓰는 사람들도 있다.-->
+   <tr>
+     <th>번 호 </th>
+     <th>제 목</th>
+     <th>글쓴이</th>
+   </tr>
+   </thead>
+   <tr>
+     <td>1</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트 </td>
+     <td>홍길동</td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>임꺽정 </td>
+   </tr>
+   <tr>
+     <td>3</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>성춘향 </td>
+   </tr>
+ </table>
+
+ <br/>
+
+ <h4 class="text-primary">table class="table" 적용시   </h4>
+ <table class="table">
+  <thead>
+   <tr>
+     <th>번 호 </th>
+     <th>제 목</th>
+     <th>글쓴이</th>
+   </tr>
+   </thead>
+   <tr>
+     <td>1</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트 </td>
+     <td>홍길동</td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>임꺽정 </td>
+   </tr>
+   <tr>
+     <td>3</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>성춘향 </td>
+   </tr>
+ </table>
+
+ <h4 class="text-primary"> class="table table-striped" 적용시   </h4>
+<table class="table table-striped">
+  <thead>
+   <tr>
+     <th>번 호 </th>
+     <th>제 목</th>
+     <th>글쓴이</th>
+   </tr>
+   </thead>
+   <tr>
+     <td>1</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트 </td>
+     <td>홍길동</td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>임꺽정 </td>
+   </tr>
+   <tr>
+     <td>3</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>성춘향 </td>
+   </tr>
+ </table>
+
+
+
+ <h4 class="text-primary"> class="table table-bordered" 적용시   </h4>
+<table class="table table-bordered">
+  <thead>
+   <tr>
+     <th>번 호 </th>
+     <th>제 목</th>
+     <th>글쓴이</th>
+   </tr>
+   </thead>
+   <tr>
+     <td>1</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트 </td>
+     <td>홍길동</td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>임꺽정 </td>
+   </tr>
+   <tr>
+     <td>3</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>성춘향 </td>
+   </tr>
+ </table>
+
+
+
+ 
+ <h4 class="text-primary"> class="table table-hover" 적용시   </h4>
+ <table class="table table-hover">
+  <thead>
+   <tr>
+     <th>번 호 </th>
+     <th>제 목</th>
+     <th>글쓴이</th>
+   </tr>
+   </thead>
+   <tr>
+     <td>1</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트 </td>
+     <td>홍길동</td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>임꺽정 </td>
+   </tr>
+   <tr>
+     <td>3</td>
+     <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+     <td>성춘향 </td>
+   </tr>
+ </table>
+
+
+
+
+  </div>
+</body>
+</html>
